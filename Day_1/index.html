@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML : DAY1</title>
+    <link rel="shortcut icon" href="https://realfavicongenerator.net/icon0.svg?89f32b2d1aa090a7"  type="image/x-icon">
+    <meta name="description" content="A simple HTML page for learning purposes">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <!-- robot tag= tell which page to show and which not
+     <meta name="robots" content="index, follow"> -->
+
+     <!-- preconnect to inc performance 
+      
+     script tag= to better seo of website: tell google what your content is -->
+
+</head>
+
+<body>
+    <h1>lecture 1</h1>
+    <h2>lecture 2</h2>
+    <h3>lecture 3</h3>
+    <h4>lecture 4</h4>
+    <h5>lecture 5</h5>
+    <h6>lecture 6</h6>
+
+    <details>
+        <summary>Click here to see more information</summary>
+        <p>This is some additional information that is hidden by default.</p>   
+    </details>
+    
+    <p>this is first paragraph.
+        <hr> this is second line
+    </p><br>
+    <p>Lorem <b>ipsum</b> dolor <strong>sit</strong> <i>amet</i> <em>adipisicing</em> elit. Aut<u>similique</u>  fugit quae
+        <small>vel</small> blanditiis saepe <mark>repellat</mark> non <del>voluptatem</del>sapiente inventore? Officia
+        repellendus quis enim culpa atque, maiores delectus istelabore inventore.</p>
+
+    <p>h<sub><small>2</small></sub>O</p>
+    <p>e=mc<sup><small>2</small></sup></p>
+
+    <a href="https://google.com"> click me </a><br>
+    <a href="sms:+9173541008663">Send SMS</a><br>
+    <!-- <a target="_blank" href="/akarsh.jpg" download="villian">go to insta </a> -->
+     <!-- this is to open in new tab -->
+    <a href="mailto:example@example.com">Send Email</a>
+    <br>
+    <img src="https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?cs=srgb&dl=pexels-jonaskakaroto-736230.jpg&fm=jpg"
+        width="300" height="300"><br>
+
+    <audio src="./gasoline_music.mp3" controls></audio><br>
+    <video width="300" height="300" controls>
+        <source src="./mango.mp4" autoplay muted loop type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/k2DSi1zGEc8?si=RymEpdYhet_I_wmV"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <ol>
+        <li>first item</li>
+        <li>second item</li>
+        <li>third item</li>
+    </ol>
+
+    <ul>
+        <li>first item</li>
+        <li>second item</li>
+        <li>third item</li>
+    </ul>
+
+    <!-- description list -->
+    <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+    </dl>
+
+    <br><br>
+    <hr><br>
+
+    <details>
+        <summary>Click here to see more information</summary>
+        <p>This is some additional information that is hidden by default.</p>
+    </details>
+
+    <br>
+    <h1 contenteditable="true">Student Registration Form</h1>
+    <h1 draggable="true">hello</h1>
+
+    <hr>
+    <hr>
+
+    <table border="2">
+        <caption>Product Table</caption>
+        <colgroup>
+            <col style="background-color: rgb(215, 252, 185);">
+            <col style="background-color: rgb(227, 156, 238);">
+            <col style="background-color: rgb(208, 162, 71);">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Apple</td>
+                <td>10</td>
+                <td>$1.00</td>
+            </tr>
+            <tr>
+                <td>Banana</td>
+                <td>5</td>
+                <td>$0.50</td>
+            </tr>
+            <tr>
+                <td>Orange</td>
+                <td>8</td>
+                <td>$0.80</td>
+            </tr>
+            <tr>
+                <th colspan="2">Total Price</th>
+                <th>$13.00</th>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+    <hr>
+
+    <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label></label>
+            <!-- legend is used to give title to fieldset -->
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" placeholder="Enter your first name"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" placeholder="Enter your email"><br><br>
+
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" placeholder="Enter your last name"><br><br>
+
+            <input type="radio" name="gender" id="male">
+            <label for="male">Male</label><br>
+            <input type="radio" name="gender" id="female">
+            <label for="female">Female</label><br>
+            <input type="radio" name="gender" id="other">
+            <label for="other">Other</label><br><br>
+
+        </fieldset>
+
+        <br><br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+        <label for="course">Select Course:</label>
+        <select name="" id="course">
+            <optgroup label="frontend">
+                <option value="">html</option>
+                <option value="">css</option>
+                <option value="">js</option>
+            </optgroup>
+            <optgroup label="backend">
+                <option value="">python</option>
+                <option value="">java</option>
+                <option value="">nodejs</option>
+            </optgroup>
+        </select><br><br>
+
+        <label for="reviews">Reviews:</label>
+        <textarea name="" id="reviews" cols="30" rows="10" placeholder="write your reviews here..."></textarea><br><br>
+
+        <input type="checkbox" name="" id="">
+        <input type="color" name="" id="">
+        <button type="submit">Submit</button>
+    </form>
+    <br><br><br>
+    <hr><br>
+
+    <!-- student regeistration form -->
+
+    <h1>Student Registration Form</h1>
+    <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="studentName">Name:</label><br>
+            <input type="text" id="studentName" placeholder="Enter your name"><br><br>
+            <label for="studentEmail">Email:</label><br>
+            <input type="email" id="studentEmail" placeholder="Enter your email"><br><br>
+            <label for="studentPhone">Phone:</label><br>
+            <input type="tel" id="studentPhone" placeholder="Enter your phone number"><br><br>
+        </fieldset>
+
+        <br><br>
+
+        <fieldset>
+            <legend>Address Details</legend>
+
+            <label for="Address line 1">Address Line 1:</label><br>
+            <textarea name="" id="Address line 1" cols="30" rows="10"
+                placeholder="Enter your address here..."></textarea><br><br>
+
+            <label for="city">City:</label><br>
+            <select name="" id="city">
+                <option value="">New York</option>
+                <option value="">Los Angeles</option>
+                <option value="">Chicago</option>
+                <br><br>
+            </select><br><br>
+            <label for="country">Country:</label><br>
+            <select name="" id="country">
+                <option value="">USA</option>
+                <option value="">Canada</option>
+                <option value="">UK</option>
+            </select>
+        </fieldset>
+
+
+        <br><br>
+
+        <label for="course">Select Course:</label><br>
+        <select id="courses">
+            <optgroup label="frontend">
+                <option value="">HTML</option>
+                <option value="">CSS</option>
+                <option value="">JavaScript</option>
+            </optgroup>
+            <optgroup label="backend">
+                <option value="">Python</option>
+                <option value="">Java</option>
+                <option value="">Node.js</option>
+            </optgroup>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <br><br><br>
+    <hr>
+    <hr><br>
+
+    <header>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <article>
+                <div>
+                    I am a content inside div.
+                </div>
+                <div>
+                    I am another div.
+                </div>
+                <span>
+                    I am span 1.
+                </span>
+                <span>
+                    I am span 2.
+                </span>
+            </article>
+            <aside>
+                <h3>Sidebar</h3>
+                <p>This is some content for the sidebar.</p>
+            </aside>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
