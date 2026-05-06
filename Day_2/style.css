@@ -1,3 +1,8 @@
+@font-face {
+    font-family: hihi;
+    src: url(./GERALDINE\ PERSONAL\ USE.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -9,8 +14,25 @@ html, body{
     width: 100%;
 }
 
-h1{
-    color:red;
-    background-color:rgb(87, 188, 227) ;
+/* h1{
+    background-color:rgb(234, 138, 191) ;
     font-size: 50px;
+    font-family: hihi;
+    font-weight: 100;
+    font-style: italic;
+    text-align: center;
+    text-transform: capitalize;
+} */
+
+div{
+    height:200px;
+    width: 200px;
+    /* background:linear-gradient(yellow,pink,blue); */
+    background: radial-gradient( yellow, pink, blue);
+    /* background: conic-gradient(  yellow, pink, yellow); */
+
+    /* for image: */
+    /* background: url(./images.jpg) no-repeat center/cover; */
+    /* background-size: cover; */
+    background-position: center;
 }
