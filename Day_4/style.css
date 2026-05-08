@@ -22,3 +22,50 @@ h1{
 #villian{
     background-color: rgb(231, 246, 155);
 }
+
+.king{
+    font-family:cursive
+}
+
+#box{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(155, 246, 155);
+    /* margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px; */
+    margin: 50px;
+    padding: 20px;
+    border: 5px solid rgb(15, 14, 14);
+    border-radius: 20px;
+}
+
+#inner{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    /* padding: 20px; */
+}
+
+button{
+    margin:50px;
+    padding:10px 20px;
+    background-color:rgb(19, 51, 147);
+    color: white;
+    border: 2px solid rgb(244, 156, 244);
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    transition:all 0.5s ease;
+    /* cubic-bezier */
+}
+
+button:hover{
+    background-color:white;
+    color: rgb(19, 51, 147);
+}
+
+/* button:active{
+    /* active works when click it hover not on touching it */
+    /* transform: scale(0.95); */
+/* }  */
