@@ -13,12 +13,24 @@ html, body{
     height: 100%;
     width: 100%;
     background-color: rgb(17, 3, 58);
+    /* if you do not want that ele shrink if more child div added then use flex-wrap: wrap; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* justify-content: space-around; */
+    justify-content: space-evenly;
+    flex-direction: column;
 }
 
+/* ***************y axis= cross axis
+align-items ******************* */
+/* ***************x axis= main axis
+justify-content ******************** */
 .child1{
     height:100px;
     width:100px;
     background-color: rgb(255, 0, 0);
+    /* flex-shrink: 0;if you want to shrink the child div but give 0 if you want to prevent shrinking of that particular child */
 }
 
 .child2{
@@ -31,4 +43,19 @@ html, body{
     height:100px;
     width:100px;
     background-color: rgb(0, 0, 255);
+}
+
+.nav{
+    background-color: rgb(243, 71, 71);
+    height: 2%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.part2{
+    display: flex;
+    gap: 20px;
 }
