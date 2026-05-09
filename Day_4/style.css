@@ -69,3 +69,34 @@ button:hover{
     /* active works when click it hover not on touching it */
     /* transform: scale(0.95); */
 /* }  */
+
+#box1{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(168, 55, 153);
+    position:absolute;
+    left:50%;
+    top:400px;
+    z-index: 1;
+     /* z-index se element ko upar niche kar sakte h */
+}
+
+#box2{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(141, 105, 54);
+    position:absolute;
+    /* abosulte se ele hawa m ajata h yah upper uth jata h */
+    left: 400px;
+    top: 300px;
+}
+
+.box3{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(54, 141, 54);
+    transform:translateX(59%);
+    /* ye box apni original position se 59% right chala jayega 
+    agar backward m jna h toh translateX(-59%) 
+    agar vertically krna h toh translateY() */
+}
