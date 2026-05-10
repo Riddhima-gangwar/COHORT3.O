@@ -1,0 +1,607 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    color: #f7f0e9;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.08), transparent 24%),
+        radial-gradient(circle at 50% 45%, rgba(255, 120, 0, 0.07), transparent 42%),
+        #030303;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.page {
+    width: min(1170px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 12px 0 10px;
+}
+
+.brand {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.brand h1 {
+    font-size: clamp(34px, 4.6vw, 50px);
+    line-height: 1;
+    letter-spacing: 0;
+    font-weight: 700;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.18);
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 7px;
+    color: #ff7b00;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+}
+
+.divider span {
+    width: 90px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #ff7b00, transparent);
+}
+
+.divider b {
+    position: relative;
+    font-size: 20px;
+    transform: rotate(180deg);
+}
+
+.drink-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.drink-card {
+    position: relative;
+    min-height: 350px;
+    padding: 16px 18px 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 23px;
+    background:
+        radial-gradient(circle at 50% 70%, rgba(255, 126, 0, 0.12), transparent 30%),
+        linear-gradient(145deg, #171513, #080808);
+    box-shadow: inset 0 0 34px rgba(255, 255, 255, 0.02);
+}
+
+.drink-card.featured {
+    border-color: #ff7b00;
+    box-shadow: 0 0 22px rgba(255, 123, 0, 0.22), inset 0 0 35px rgba(255, 123, 0, 0.05);
+}
+
+.badge {
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 5;
+    padding: 6px 12px;
+    border: 1px solid #ff7b00;
+    border-radius: 999px;
+    color: #ff8a12;
+    background: #15100d;
+    font: 700 12px Arial, Helvetica, sans-serif;
+}
+
+.badge.new {
+    left: 24px;
+}
+
+.drink-card h2 {
+    margin-top: 12px;
+    font-size: 21px;
+    line-height: 1.1;
+    text-align: center;
+    text-shadow: 0 2px 0 #000;
+}
+
+.drink-card p:not(.badge) {
+    margin-top: 7px;
+    color: #bdb5ad;
+    font: 14px Arial, Helvetica, sans-serif;
+}
+
+.small-line {
+    width: 48px;
+    height: 1px;
+    margin: 11px 0 8px;
+    background: #ff7b00;
+}
+
+.drink-card strong {
+    color: #ff7b00;
+    font: 800 19px Arial, Helvetica, sans-serif;
+}
+
+.drink-photo {
+    width: 100%;
+    height: 190px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 16px;
+    filter: saturate(1.08) contrast(1.05);
+    box-shadow: 0 18px 24px rgba(0, 0, 0, 0.45);
+}
+
+.sprite-photo,
+.special-sprite {
+    background-image: url("menu-reference.png");
+    background-repeat: no-repeat;
+    background-size: 977px 878px;
+    filter: saturate(1.08) contrast(1.05);
+}
+
+.sprite-photo {
+    width: 180px;
+    height: 195px;
+    margin-top: 6px;
+}
+
+.sunset-photo {
+    width: 145px;
+    background-position: -77px -151px;
+}
+
+.passion-photo {
+    background-position: -303px -152px;
+}
+
+.citrus-photo {
+    height: 205px;
+    background-position: -525px -134px;
+}
+
+.berry-photo {
+    height: 174px;
+    margin-top: 27px;
+    background-position: -760px -202px;
+}
+
+.drink {
+    position: relative;
+    width: 105px;
+    margin: 0 auto;
+    border: 2px solid rgba(255, 255, 255, 0.72);
+    border-top-width: 3px;
+    box-shadow:
+        inset 8px 0 13px rgba(255, 255, 255, 0.16),
+        inset -8px 0 13px rgba(0, 0, 0, 0.25),
+        0 20px 20px rgba(0, 0, 0, 0.45);
+}
+
+.drink::before {
+    content: "";
+    position: absolute;
+    left: 11%;
+    right: 11%;
+    bottom: -8px;
+    height: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    border-radius: 50%;
+}
+
+.drink.tall {
+    height: 158px;
+    border-radius: 24px 24px 36px 36px / 120px 120px 28px 28px;
+    background: linear-gradient(#ff9a25 0 33%, #ff530c 56%, #c60007 100%);
+}
+
+.drink.square {
+    height: 165px;
+    width: 92px;
+    border-radius: 7px 7px 16px 16px;
+    background: linear-gradient(#ffe256 0 20%, #ffac1d 52%, #d26605 79%, #5b1c02 100%);
+}
+
+.drink.slim {
+    height: 172px;
+    width: 82px;
+    border-radius: 9px 9px 20px 20px;
+    background: linear-gradient(#ffdc34 0 30%, #ff9b00 62%, #f35a02 84%, #b70008 100%);
+}
+
+.drink.short {
+    height: 116px;
+    width: 108px;
+    border-radius: 12px 12px 24px 24px;
+    background: linear-gradient(#ffd6c9 0 30%, #ff7467 55%, #d80017 100%);
+}
+
+.ice,
+.ice::before,
+.ice::after {
+    position: absolute;
+    content: "";
+    width: 31px;
+    height: 25px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.43);
+    box-shadow: 0 0 7px rgba(255, 255, 255, 0.25);
+    transform: rotate(20deg);
+}
+
+.ice {
+    top: 28px;
+    left: 21px;
+}
+
+.ice::before {
+    top: 14px;
+    left: 42px;
+    transform: rotate(-17deg);
+}
+
+.ice::after {
+    top: 50px;
+    left: 12px;
+    transform: rotate(9deg);
+}
+
+.mint,
+.mint::before,
+.mint::after {
+    position: absolute;
+    width: 24px;
+    height: 13px;
+    border-radius: 80% 0 80% 0;
+    background: #73b800;
+    transform: rotate(-35deg);
+}
+
+.mint {
+    top: -30px;
+    left: 22px;
+}
+
+.mint::before,
+.mint::after {
+    content: "";
+}
+
+.mint::before {
+    left: 17px;
+    top: 6px;
+    transform: rotate(45deg);
+}
+
+.mint::after {
+    left: 34px;
+    top: 13px;
+    transform: rotate(-20deg);
+}
+
+.fruit {
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #f6dc22;
+    background: repeating-conic-gradient(from 10deg, #fff279 0 9deg, #ffc21a 10deg 18deg);
+    box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.45);
+}
+
+.orange {
+    width: 44px;
+    height: 44px;
+    top: -25px;
+    right: 9px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+.lime {
+    width: 48px;
+    height: 48px;
+    top: -18px;
+    right: -24px;
+}
+
+.lemon {
+    width: 48px;
+    height: 48px;
+    top: -15px;
+    right: -20px;
+    clip-path: polygon(0 0, 100% 0, 100% 63%, 0 48%);
+}
+
+.wedge {
+    width: 47px;
+    height: 47px;
+    left: -40px;
+    bottom: 37px;
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+
+.berry {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    top: 31px;
+    left: 58px;
+    border-radius: 50%;
+    background: #d71920;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.24);
+}
+
+.bubbles {
+    position: absolute;
+    left: 31px;
+    bottom: 25px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #5b1b05;
+    box-shadow: 15px 4px #74300a, 28px -3px #5f2205, 42px 8px #7b3108, 31px 20px #5b1b05;
+}
+
+.straw {
+    position: absolute;
+    width: 8px;
+    height: 132px;
+    top: -48px;
+    right: 18px;
+    transform: rotate(11deg);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: #090909;
+}
+
+.special {
+    position: relative;
+    display: grid;
+    grid-template-columns: 270px 1fr 230px;
+    gap: 26px;
+    align-items: center;
+    min-height: 220px;
+    margin-top: 14px;
+    padding: 16px 34px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 23px;
+    background:
+        radial-gradient(circle at 12% 56%, rgba(255, 123, 0, 0.12), transparent 28%),
+        linear-gradient(135deg, #171513, #070707);
+    box-shadow: inset 0 0 0 1px rgba(255, 123, 0, 0.1);
+}
+
+.dish {
+    position: relative;
+    height: 180px;
+}
+
+.special-photo {
+    width: 100%;
+    height: 180px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 18px;
+    box-shadow: 0 18px 24px rgba(0, 0, 0, 0.5);
+}
+
+.special-sprite {
+    width: 260px;
+    height: 180px;
+    background-position: -58px -528px;
+}
+
+.plate {
+    position: absolute;
+    left: 20px;
+    width: 190px;
+    height: 76px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center, #3d3b39 0 32%, #111 33% 100%);
+    border: 8px solid #282421;
+    transform: rotate(-10deg);
+    box-shadow: 0 15px 23px rgba(0, 0, 0, 0.55);
+}
+
+.plate-top {
+    top: 10px;
+}
+
+.plate-bottom {
+    bottom: 16px;
+    left: 48px;
+}
+
+.plate span {
+    position: absolute;
+    width: 35px;
+    height: 23px;
+    border-radius: 14px;
+    background: linear-gradient(145deg, #9d3d15, #491709);
+    box-shadow: inset 6px 5px 8px rgba(255, 169, 81, 0.32);
+}
+
+.plate span:nth-child(1) { left: 30px; top: 25px; }
+.plate span:nth-child(2) { left: 70px; top: 15px; background: linear-gradient(145deg, #d78122, #622510); }
+.plate span:nth-child(3) { left: 108px; top: 29px; }
+.plate span:nth-child(4) { left: 138px; top: 19px; background: linear-gradient(145deg, #d52515, #621006); }
+
+.slice {
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    top: 1px;
+    left: 102px;
+    border: 5px solid #ffdf26;
+    border-radius: 50%;
+    background: repeating-conic-gradient(#fff27a 0 9deg, #ffb31a 10deg 18deg);
+    clip-path: polygon(0 0, 100% 0, 55% 100%);
+    transform: rotate(18deg);
+}
+
+.special-content {
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow {
+    color: #ff7b00;
+    font: 700 12px Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+.special h2 {
+    margin-top: 9px;
+    font-size: clamp(26px, 3vw, 34px);
+    line-height: 1.08;
+}
+
+.special h3 {
+    margin-top: 9px;
+    color: #bdb5ad;
+    font: 15px Arial, Helvetica, sans-serif;
+}
+
+.special-content > p:last-of-type {
+    max-width: 570px;
+    margin-top: 10px;
+    color: #a9a29c;
+    font: 15px/1.45 Arial, Helvetica, sans-serif;
+}
+
+.special a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 13px;
+    min-width: 180px;
+    padding: 11px 22px;
+    border: 1px solid #ff7b00;
+    border-radius: 999px;
+    color: #ff7b00;
+    text-decoration: none;
+    font: 700 14px Arial, Helvetica, sans-serif;
+}
+
+.leaf-art {
+    position: relative;
+    height: 205px;
+    opacity: 0.35;
+}
+
+.leaf-art::before {
+    content: "";
+    position: absolute;
+    left: 132px;
+    top: 28px;
+    width: 1px;
+    height: 200px;
+    background: #7f3507;
+    transform: rotate(23deg);
+}
+
+.leaf-art span {
+    position: absolute;
+    width: 90px;
+    height: 42px;
+    border: 1px solid #7f3507;
+    border-radius: 90% 0 90% 0;
+}
+
+.leaf-art span:nth-child(1) { top: 48px; left: 111px; transform: rotate(-62deg); }
+.leaf-art span:nth-child(2) { top: 99px; left: 68px; transform: rotate(-20deg); }
+.leaf-art span:nth-child(3) { top: 127px; left: 145px; transform: rotate(-62deg); }
+.leaf-art span:nth-child(4) { top: 178px; left: 98px; transform: rotate(-16deg); }
+.leaf-art span:nth-child(5) { top: 199px; left: 166px; transform: rotate(-57deg); }
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 12px 54px 13px;
+    border-top: 1px solid rgba(255, 123, 0, 0.5);
+    color: #a9a29c;
+    font: 14px Arial, Helvetica, sans-serif;
+}
+
+.footer nav,
+.social {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.footer a {
+    color: #a9a29c;
+    text-decoration: none;
+}
+
+.footer span,
+.social a {
+    color: #ff7b00;
+}
+
+.social {
+    gap: 13px;
+}
+
+.social a {
+    display: grid;
+    width: 30px;
+    height: 30px;
+    place-items: center;
+    border: 1px solid #ff7b00;
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+@media (max-width: 980px) {
+    .drink-grid,
+    .special {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .special {
+        grid-template-columns: 1fr;
+    }
+
+    .dish,
+    .leaf-art {
+        display: none;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 620px) {
+    .page {
+        width: min(100% - 28px, 1170px);
+    }
+
+    .drink-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .drink-card {
+        min-height: 430px;
+    }
+
+    .special {
+        padding: 28px 22px;
+    }
+
+    .footer nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
