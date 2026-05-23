@@ -54,7 +54,7 @@
 // -instanceof operator: instanceof
 
 console.log(5 + 10) // 15
-
+console.log(10>5?'hello':'bye') // 'hello'
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -70,3 +70,95 @@ if(q>w)
 else{
     console.log('w is greater than q')
 }
+
+
+
+var math=Number(prompt('enter the math marks'))
+var eng=Number(prompt('enter the english marks'))
+var sci=Number(prompt('enter the science marks'))
+console.log(math, eng, sci)
+var total=math+sci+eng;
+var avg=total/3;
+if(avg>50)
+{
+    console.log('pass')
+}
+else if(avg==50)
+{
+    console.log('pass with average marks')
+}
+else
+{
+    console.log('fail')
+}
+
+
+
+var gender=prompt('enter the gender(M/F)')
+var age=Number(prompt('enter the age'))
+if(gender=='F')
+{
+if(age>=18 && age<=60)
+{
+    console.log('will get $4000 per month')
+}
+else
+{
+    console.log('not eligible for job')
+}
+}
+
+
+//switch 
+var day=prompt('enter the day')
+switch(day)
+{
+    case 'monday':
+        console.log('today is monday')
+        break;
+    case 'tuesday':
+        console.log('today is tuesday')
+        break;
+    case 'wednesday':
+        console.log('today is wednesday')
+        break;  
+    case 'thursday':
+        console.log('today is thursday')
+        break;
+    default:
+        console.log('enter a valid day')   
+}
+//if want to do comparision ques then first assign make switch(true) and then write cases with conditions
+var num=Number(prompt('enter a number'))
+switch(true)
+{
+    case num>0:
+        console.log('number is positive')   
+        break;
+    case num<0:
+        console.log('number is negative')
+        break;
+    case num==0:
+        console.log('number is zero')
+        break;
+    default:
+        console.log('enter a valid number')
+}
+
+
+
+
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------
+//                     Truthy and Falsy values
+
+// - In JavaScript, a value is considered "truthy" if it evaluates to true in a boolean context, and "falsy" if it evaluates to false. The following values are considered falsy:
+// - false
+// - 0 (zero)
+// - '' (empty string)
+// - null
+// - undefined
+// - NaN (Not a Number)
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------
+
