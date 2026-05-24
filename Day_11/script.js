@@ -86,6 +86,7 @@ if(avg>50)
 else if(avg==50)
 {
     console.log('pass with average marks')
+    continue//continue is used to skip the current iteration of a loop and move to the next iteration. It cannot be used outside of a loop.
 }
 else
 {
@@ -162,3 +163,9 @@ switch(true)
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------
 
+//                     FUNCTIONS
+
+function hero(name){
+    console.log('my hero is', name)
+}
+hero()
