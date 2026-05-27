@@ -60,14 +60,19 @@ for(var i=0;i<arr2.length;i++){
     console.log(arr2[i]);
 }
 
+
+
 for(i of arr2){
     console.log(i);
 }
+
+
 
 //.join
 var arr3=[10,20,30,40,50];
 var str=arr3.join('-');
 console.log(str);
+
 
 //
 var h=[]
@@ -84,6 +89,8 @@ var w=[88,99,77,66,55];
 var e=q.concat(w);
 console.log(e);
 
+
+
 //referenece behaviour of array
 var a=10
 var b=a;
@@ -91,11 +98,13 @@ b=50
 console.log(a);
 console.log(b);
 
+
 var x=[10,20,30];
 var j=x;
 x[0]=100;
 console.log(x);
 console.log(j);
+
 
 //copying an array
 var arr=[10,20,30,40,50];
