@@ -1,4 +1,0 @@
-frontend
--html(for structure) -- hyper text markup lang
--css(for styling)
--js(for functionality)
