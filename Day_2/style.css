@@ -30,7 +30,6 @@ div{
     /* background:linear-gradient(yellow,pink,blue); */
     background: radial-gradient( yellow, pink, blue);
     /* background: conic-gradient(  yellow, pink, yellow); */
-
     /* for image: */
     /* background: url(./images.jpg) no-repeat center/cover; */
     /* background-size: cover; */
