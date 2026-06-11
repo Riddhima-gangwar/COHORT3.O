@@ -108,6 +108,6 @@ console.log(j);
 
 //copying an array
 var arr=[10,20,30,40,50];
-var arr2=[arr[0],arr[1],...arr[n-1]];//spread operator
-// beter to write like
+var arr2=[arr[0],arr[1],...arr[arr.length-1]];//spread operator
+// better to write like
 var arr2=[...arr];
