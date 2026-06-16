@@ -95,3 +95,38 @@ var newusers= users.filter(function(elem){
 })
 console.log(newusers);
 
+
+
+
+// *************************************** REDUCE ***********************************************
+
+// it is used to reduce the array to a single value
+//here we pass accumulator and initial value as an argument in the callback function
+//accumulator is the value which is being accumulated and initial value is the starting point of the accumulation
+// it return single value
+
+var arr=[10,20,300,40];
+var max = arr.reduce(function(acc,val){
+    if(val>acc)
+    {
+        return val
+    }
+    return acc;
+},0)// here 0 is the initial value and acc is the accumulator which is being updated with the maximum value found in the array
+console.log(max);
+
+//acc=value ko store krke rkhta hai and val= current value of the array
+var arr3=[12,99,46,76,5]
+// arr.reduce(Callback,initialvaL)
+var ans = arr3.reduce(function(acc,val){
+    return acc+2;
+},0)
+console.log(ans);
+
+
+// the sum of all elements
+var ans = arr3.reduce(function(acc, val) {
+    return acc + val;
+}, 0);
+
+console.log(ans);
