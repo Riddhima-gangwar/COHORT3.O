@@ -115,7 +115,7 @@ var max = arr.reduce(function(acc,val){
 },0)// here 0 is the initial value and acc is the accumulator which is being updated with the maximum value found in the array
 console.log(max);
 
-//acc=value ko store krke rkhta hai and val= current value of the array
+//acc=previous result ||value ko store krke rkhta hai and val= current value of the array
 var arr3=[12,99,46,76,5]
 // arr.reduce(Callback,initialvaL)
 var ans = arr3.reduce(function(acc,val){
@@ -130,3 +130,46 @@ var ans = arr3.reduce(function(acc, val) {
 }, 0);
 
 console.log(ans);
+
+
+
+// ************************************ find ***********************************************
+// it is used to find the first element in the array which satisfies the condition provided in the callback function
+// it returns undefined if no element is found as per the condition
+
+var arr=['raja','rani','priyanshu','siddharth'];
+var ans = arr.find(function(elem){
+    return elem === 'priyanshu';
+})
+console.log(ans)
+
+//findIndex- it is used to find the index of the first element in the array which satisfies the condition provided in the callback function
+var ans = arr.findIndex(function(elem){
+    return elem === 'priyanshu';
+})
+console.log(ans)
+
+var arr=['bijoy','chandu','deepak']
+var ans = arr.find(a=>a.includes('a'))// it will return the first element which has a in it
+//if in place of find we usze(some) then it will return ans as true false
+var ans = arr.some(a=>a.includes('a'))// it will return true if there is at least one element which has a in it
+// if we use every then it will return true if all the elements have a in it
+var ans = arr.every(a=>a.includes('a'))// it will return true if all the elements have a in it
+
+console.log(ans)
+
+
+
+
+// ************************************* destructuring ***********************************************
+
+var arr=[10,20,30,40];
+// without destructuring
+var a=arr[0];   
+var b=arr[1];
+var c=arr[2];
+var d=arr[3];
+console.log(a,b,c,d);
+
+var [a,b,c]=arr;// with destructuring
+console.log(c);
