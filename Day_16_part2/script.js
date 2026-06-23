@@ -174,3 +174,13 @@ console.log(typeof b);
 var c=JSON.parse(b);
 console.log(c);
 console.log(typeof c);
+
+//for in loop
+var obj={
+    name:'krishan',
+    age:22, 
+}
+for(var key in obj){
+    console.log(key);   
+    console.log(obj[key]);//to access value of key we have to use bracket notation
+}   
