@@ -22,3 +22,4 @@ var b=10;//undefined defauult value
 //closure is created when a function is defined inside another function and the inner function has access to the variables of the outer function even after the outer function has returned
 
 //scope chain : it is the chain of scopes that are created when a function is called. When a function is called, a new scope is created and it has access to the variables of its parent scope and so on until the global scope is reached.
+//scope chain is created when a function is called and it is destroyed when the function execution is completed
