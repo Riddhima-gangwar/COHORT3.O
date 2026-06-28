@@ -9,11 +9,13 @@ console.log(arr);
 //queue : fifo(first in first out) data structure
 //call stack : it is a stack data structure which stores the function calls in the order they are called and executes them in the reverse order
 // in callstack first gec is created and then the function calls are pushed into the stack and when the function execution is completed it is popped out of the stack
+// callstack is used to keep track of the function calls and their execution context
 
 console.log(b);//return undefined because in memory creation phase js engine creates memory for all the variables and functions and assigns undefined to all the variables and functions
 var b=10;//undefined defauult value
 
 //temporary dead zone : it is the time period between the memory creation phase and code execution phase in which the variables are in the temporary dead zone and cannot be accessed
+
 
 //lexical scoping : it is the process of determining the scope of a variable based on its location in the source code. In lexical scoping, 
 // the scope of a variable is determined by its position in the source code and nested functions have access to variables declared in their outer scope.
