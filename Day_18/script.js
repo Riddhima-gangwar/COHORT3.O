@@ -115,3 +115,73 @@ var result2=function(maths,computer,english){
     console.log(`${this.firstname} ${this.lastname} got ${maths} in maths, ${computer} in computer and ${english} in english`);
 }
 result2.apply(student3, [student3.maths, student3.computer, student3.english]);
+
+
+//bind method is used to bind the this keyword to a specific object. It returns a new function with the this keyword bound to the specified object.
+var student4={
+    firstname:'Sarthak',    
+lastname:'Rajput',
+getIntro:function()
+{
+    console.log(this.firstname+" "+this.lastname);
+}    
+}
+
+
+
+//****************************************************************** */
+
+//PROTOTYPE
+//yeh ek link hota h jo dusre obj ko point krta . uss dusre obj ko bolte hai uska prototype
+
+var arr= [10,20,30,40]
+
+var obj={
+    name:'Sarthak',
+    age:20
+}
+
+function hero(){
+    
+}
+console.log(arr.push);//
+console.log(arr.__proto__);//will get all prototype methods of array 
+ console.log(arr.__proto__.__proto__)//get object of prototype method
+//after once again it will show null
+
+//  Array -> Array -> Object
+//  Object -> Object
+//  Function -> Function -> Object
+
+var college={
+    name:'IIT Bombaby',
+    Rating:'A+',
+    students:5000,
+    saySlogan:function(){
+        console.log('we are best , we are iit');
+    }
+}
+var branch={
+    title:'Branch',
+    name:'CSE',
+    Rating: 'A++',
+    students:500,
+    subjects:['TOC','SD','CD']
+}
+
+var user = {
+    name:'Raja',
+    age:30,
+    marks:98
+}
+
+user.__proto__ = branch
+branch.__proto__=college
+
+console.log(user.subjects);
+
+
+//difference bet __proto__ and prototype
+//har object par                                      sirf func par
+//obj k prototype tk k actual link             wo obj jo new s bane instances k __proto__ banegs
+//prototype hai                                  instance k prototype hoga
