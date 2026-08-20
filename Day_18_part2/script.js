@@ -132,4 +132,41 @@ const m = new MathHelper();
 
 // ### Getters & Setters
 // In se hum method ko property ki tarah use karte hain (bina `()` lagaye).
+//Validation ke liye bahut useful (setter mein check laga sakte ho).
+class Person {
+  constructor(first, last) {
+    this.first = first;
+    this.last = last;
+  }
+  get fullName() {           // getter
+    return this.first + " " + this.last;
+  }
+  set fullName(value) {      // setter
+    const parts = value.split(" ");
+    this.first = parts[0];
+    this.last  = parts[1];
+  }
+}
+const p = new Person("Rahul", "Sharma");
+console.log(p.fullName);    // Rahul Sharma (bina () ke!)
+p.fullName = "Priya Verma"; // setter chala
+console.log(p.first);       // Priya
 
+
+
+//private fields = # =lagane se field bahar se access nahi ho sakta — sirf class ke andar.
+class BankAccount {
+  #balance = 0; // private field
+  deposit(amount) { this.#balance += amount; }
+  getBalance() { return this.#balance; }
+}
+const acc = new BankAccount();
+acc.deposit(500);
+console.log(acc.getBalance()); // 500
+// console.log(acc.#balance); → SyntaxError: bahar se access nahi!
+//#balance ko sirf class ke andar wale methods chhoo sakte hain. Yeh encapsulation deta hai
+
+
+
+
+//"Class" JavaScript mein koi nayi cheez nahi hai. Andar-andar yeh wahi purana prototype + constructor function hai, bas dikhne mein sundar. Isko bolte hain "syntactic sugar" — meethi packaging, andar wahi cheez.
