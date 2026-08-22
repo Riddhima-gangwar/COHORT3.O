@@ -170,3 +170,6 @@ console.log(acc.getBalance()); // 500
 
 
 //"Class" JavaScript mein koi nayi cheez nahi hai. Andar-andar yeh wahi purana prototype + constructor function hai, bas dikhne mein sundar. Isko bolte hain "syntactic sugar" — meethi packaging, andar wahi cheez.
+
+
+//event loop = JS ka heart hai. JS single-threaded hai, par event loop ke through asynchronous kaam kar sakta hai. Event loop continuously check karta hai ki call stack empty hai ya nahi, aur agar empty hai toh message queue se next callback ko call stack mein daal deta hai.
